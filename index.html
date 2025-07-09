@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XPDevs Website Moved</title>
+  <meta charset="UTF-8">
+  <script>
+    let countdown = 5;
+    function updateCountdown() {
+      document.getElementById("count").innerText = countdown;
+      if (countdown <= 0) {
+        window.location.href = "https://xpdevs.github.io";
+      } else {
+        countdown--;
+        setTimeout(updateCountdown, 1000);
+      }
+    }
+
+    function skipCountdown() {
+      window.location.href = "https://xpdevs.github.io";
+    }
+
+    window.onload = updateCountdown;
+  </script>
+</head>
+<body>
+  <h1>Notice: XPDevs Website Has Moved</h1>
+  
+  <p>You're currently visiting an old or outdated link to the XPDevs website.</p>
+  
+  <p>The official XPDevs site has been moved to a new address. This change was made to improve performance, accessibility, and to support future updates more efficiently.</p>
+  
+  <p>The new website can be accessed here:<br>
+     <strong><a href="https://xpdevs.github.io">https://xpdevs.github.io</a></strong></p>
+  
+  <p>You will be automatically redirected in <span id="count">5</span> seconds...</p>
+
+  <p>If you don't want to wait, you can click the button below to skip the countdown:</p>
+
+  <button onclick="skipCountdown()">Skip Countdown and Go Now</button>
+
+  <p>Thanks for supporting XPDevs! See you on the new site.</p>
+</body>
+</html>
